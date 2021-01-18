@@ -1,14 +1,14 @@
 import React, {Dispatch, useState} from "react";
 import {connect} from "react-redux";
-import NavBarStyles from "./navBar.module.css";
+import NavBarStyles from "./styles/navBar.module.css";
 import {Link} from "react-router-dom";
 import DarkModeToggle from "react-dark-mode-toggle";
 import {FaHamburger} from "react-icons/fa";
 import {appStateType} from "../../store/app/type";
 
 
-const NavBar: React.FC<navBarPropsType> = ({ darkMode}): JSX.Element => {
-    const [isDarkMode, setIsDarkMode] = useState(darkMode);
+const NavBar = (props: navBarPropsType): JSX.Element => {
+    const [isDarkMode, setIsDarkMode] = useState(props.darkMode);
     return (
         <div className={NavBarStyles.navBarContainer}>
             <Link to = {'/login'} className={`${NavBarStyles.navBarLogo} link`}>QA</Link>

@@ -4,11 +4,11 @@ import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux";
 import {Provider} from "react-redux";
 
-import appReducer from "./store/app/appReducer";
+import reducer from "./store/rootReducer";
 import App from "./App";
 import './index.css';
 
-const store = createStore(appReducer);
+const store = createStore(reducer);
 
 ReactDOM.render(
   <Provider store={store}>

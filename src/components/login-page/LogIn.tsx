@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
 
-import LoginStyles from "./login.module.css";
-import CommonStyles from "../common/common.module.css";
-import NavBar from "../common/navBar";
+import LoginStyles from "./styles/login.module.css";
+import CommonStyles from "../base/styles/common.module.css";
+import NavBar from "../base/navBar";
 
 const LogIn:React.FC<loginPropsType> = (props): JSX.Element => {
 
